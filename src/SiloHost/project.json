@@ -9,8 +9,8 @@
       "type": "platform",
       "version": "1.0.1"
     },
-    "Microsoft.Orleans.OrleansProviders": "2.0.0-beta-Dev201610281453",
-    "Microsoft.Orleans.OrleansRuntime": "2.0.0-beta-Dev201610281453"
+    "Microsoft.Orleans.OrleansProviders": "2.0.0-beta*",
+    "Microsoft.Orleans.OrleansRuntime": "2.0.0-beta*"
   },
 
   "frameworks": {

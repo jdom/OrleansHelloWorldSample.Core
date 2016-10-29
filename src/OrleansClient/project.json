@@ -9,8 +9,7 @@
       "type": "platform",
       "version": "1.0.1"
     },
-    "Microsoft.Orleans.Core": "2.0.0-beta-Dev201610281453"
-  },
+    "Microsoft.Orleans.Core": "2.0.0-beta*"  },
 
   "frameworks": {
     "netcoreapp1.0": {
