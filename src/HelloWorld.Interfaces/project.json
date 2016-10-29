@@ -1,14 +1,12 @@
 {
-  "version": "1.0.0-*",
-
+  "supports": {},
   "dependencies": {
+    "Microsoft.Orleans.Core": "2.0.0-beta-Dev201610281453",
     "Microsoft.Orleans.OrleansCodeGenerator.Build": "2.0.0-beta-Dev201610281453",
     "NETStandard.Library": "1.6.0"
   },
 
   "frameworks": {
-    "netstandard1.6": {
-      "imports": "dnxcore50"
-    }
+    "netstandard1.5": {}
   }
 }

@@ -5,16 +5,20 @@
   },
 
   "dependencies": {
-    "HelloWorld.Interfaces": "1.0.0-*",
     "Microsoft.NETCore.App": {
       "type": "platform",
       "version": "1.0.1"
     },
-    "Microsoft.Orleans.Core": "2.0.0-beta-Dev201610281453",
+    "Microsoft.Orleans.Core": "2.0.0-beta-Dev201610281453"
   },
 
   "frameworks": {
     "netcoreapp1.0": {
+      "dependencies": {
+        "HelloWorld.Interfaces": {
+          "target": "project"
+        }
+      },
       "imports": "dnxcore50"
     }
   }
