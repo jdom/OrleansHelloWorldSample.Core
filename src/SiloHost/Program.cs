@@ -1,5 +1,6 @@
 ﻿using System;
 using Orleans.Runtime.Configuration;
+using Orleans.Runtime.Host;
 
 namespace OrleansSiloHost
 {
@@ -25,8 +26,10 @@ namespace OrleansSiloHost
         {
             // define the cluster configuration
             var config = ClusterConfiguration.LocalhostPrimarySilo();
-            config.AddMemoryStorageProvider();
-
+            config.Globals.DataConnectionString = "Your azure connection string";
+            config.Globals.LivenessType = GlobalConfiguration.LivenessProviderType.AzureTable;
+            config.Globals.DeploymentId = "DeployemtnId";
+            config.AddAzureTableStorageProvider("AzureStore");
             hostWrapper = new OrleansHostWrapper(config, args);
             return hostWrapper.Run();
         }

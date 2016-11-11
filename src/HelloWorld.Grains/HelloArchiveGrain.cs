@@ -6,6 +6,7 @@ using Orleans;
 
 namespace HelloWorld.Grains
 {
+    [Orleans.Providers.StorageProvider(ProviderName = "AzureStore")]
     public class HelloArchiveGrain : Grain<GreetingArchive>, IHelloArchive
     {
         public async Task<string> SayHello(string greeting)

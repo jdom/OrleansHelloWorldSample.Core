@@ -16,6 +16,11 @@ namespace OrleansClient
         static int Main(string[] args)
         {
             var config = ClientConfiguration.LocalhostSilo();
+            config.Gateways.Clear();
+            config.DataConnectionString = "Your connection string";
+            config.GatewayProvider = ClientConfiguration.GatewayProviderType.AzureTable;
+            config.DeploymentId = "DeploymentId";
+
             try
             {
                 InitializeWithRetries(config, initializeAttemptsBeforeFailing: 5);
@@ -64,6 +69,14 @@ namespace OrleansClient
             var friend = GrainClient.GrainFactory.GetGrain<IHello>(0);
             var response = await friend.SayHello("Good morning, my friend!");
             Console.WriteLine("\n\n{0}\n\n", response);
+            var archiveGrain = GrainClient.GrainFactory.GetGrain<IHelloArchive>(1);
+            response = await archiveGrain.SayHello("I'm ArchiveGrain");
+            var greetings = await archiveGrain.GetGreetings();
+            foreach(var greeting in greetings)
+            {
+                Console.WriteLine("\n\n{0}\n\n", greeting);
+            }
+            
         }
 
     }
