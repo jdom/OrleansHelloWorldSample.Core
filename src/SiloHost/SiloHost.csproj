@@ -19,6 +19,9 @@
     <PackageReference Include="Microsoft.Orleans.Core">
       <Version>2.0.0-beta*</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.Orleans.OrleansCodeGenerator">
+      <Version>2.0.0-beta*</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.Orleans.OrleansProviders">
       <Version>2.0.0-beta*</Version>
     </PackageReference>

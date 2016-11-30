@@ -1,4 +1,4 @@
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
   <PropertyGroup>
     <TargetFramework>netstandard1.5</TargetFramework>
@@ -11,9 +11,6 @@
     <PackageReference Include="Microsoft.Orleans.Core">
       <Version>2.0.0-beta*</Version>
     </PackageReference>
-    <PackageReference Include="Microsoft.Orleans.OrleansCodeGenerator.Build">
-      <Version>2.0.0-beta*</Version>
-    </PackageReference>
     <PackageReference Include="NETStandard.Library">
       <Version>1.6.1</Version>
     </PackageReference>
@@ -24,6 +21,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HelloWorld.Interfaces\HelloWorld.Interfaces.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
